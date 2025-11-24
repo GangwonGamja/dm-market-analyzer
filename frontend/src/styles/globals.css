@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-deep-navy text-white;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-slate-800 rounded-xl p-6 shadow-lg;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:scale-105;
+  }
+}
+
+
+
