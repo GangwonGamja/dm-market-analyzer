@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     marketaux_api_key: Optional[str] = None
     database_url: str = "sqlite:///./etf_advisor.db"
     host: str = "0.0.0.0"
-    port: int = 8000
+    port: int = int(os.getenv("PORT", 8000))  # Render는 $PORT 환경 변수 제공
 
     class Config:
         env_file = str(env_path) if env_path.exists() else ".env"

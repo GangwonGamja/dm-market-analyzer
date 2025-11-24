@@ -9,6 +9,13 @@ from core.cache import cache
 import uvicorn
 from core.config import settings
 
+# Render 무료 서버 24시간 유지 트릭
+try:
+    import backend.keep_alive
+    backend.keep_alive.start_keep_alive()
+except Exception as e:
+    print(f"[WARNING] Keep-alive 모듈 로드 실패 (로컬 환경일 수 있음): {e}")
+
 app = FastAPI(
     title="ETF Advisor API",
     description="무료 API 기반 ETF 투자 어드바이저 API",

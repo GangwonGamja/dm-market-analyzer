@@ -5,8 +5,8 @@ pydantic==2.5.0
 pydantic-settings==2.1.0
 python-dotenv==1.0.0
 yfinance==0.2.32
-pandas==2.2.0
-numpy==1.26.0
+pandas>=2.2.0
+numpy>=2.0.0
 requests==2.31.0
 python-multipart==0.0.6
 apscheduler==3.10.4
@@ -16,3 +16,7 @@ beautifulsoup4==4.12.2
 lxml==5.1.0
 vaderSentiment==3.3.2
 nltk==3.8.1
+newspaper3k==0.2.8
+requests-html==0.10.0
+selenium==4.15.2
+
